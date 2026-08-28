@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azure Interactive Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div>
+                <h1 id="greeting">Welcome Back!</h1>
+                <p class="subtitle">Hosted live on Azure Static Web Apps ☁️</p>
+            </div>
+            <button id="theme-toggle" class="btn-icon" aria-label="Toggle Theme">🌙</button>
+        </header>
+
+        <section class="stats-grid">
+            <div class="stat-card">
+                <h3>Total Tasks</h3>
+                <p id="total-count">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Completed</h3>
+                <p id="completed-count">0</p>
+            </div>
+        </section>
+
+        <section class="task-input-section">
+            <form id="task-form">
+                <input type="text" id="task-input" placeholder="What needs to be done today?" required autocomplete="off">
+                <button type="submit" class="btn-primary">Add Task</button>
+            </form>
+        </section>
+
+        <section class="task-list-section">
+            <h2>Your Task List</h2>
+            <ul id="task-list">
+                </ul>
+            <p id="empty-state" class="empty-state">No tasks yet. Add one above to get started!</p>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
